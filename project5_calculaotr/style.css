@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+   background-color: #74EBD5;
+    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator{
+    background: #3a4452;
+    padding: 20px;
+    border-radius: 10px;
+  
+    
+}
+
+.calculator form input{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+form .display {
+     display: flex;
+     justify-content: flex-end;
+     margin:20px 0 ;
+     
+}
+
+form .display input{
+     text-align: right;
+     flex: 1;
+    flex-wrap: wrap;
+     font-size: 45px;
+     box-shadow: none;
+}
+
+form input.equal{
+   width: 145px;
+}
+
+form input.oprator{
+    color: #33ffd8;
+}
+
+
+/* Media query for screens less than 375px */
+/* Media query for screens less than 375px */
+@media only screen and (max-width: 374px) {
+    .container {
+        /* Adjust the container's padding or any other styles if necessary */
+        text-align: center;
+
+        padding: 8px;
+    }
+
+    .calculator {
+        padding: 10px; /* Reduced padding for more space */
+        width: 90%; /* Optional: Adjust based on your design preference */
+        max-width: 320px; /* Adjust the calculator width to fit smaller screens better */
+    }
+
+    .calculator form input {
+        width: 38px; /* Smaller width for the buttons */
+        height: 38px; /* Smaller height for the buttons */
+        font-size: 16px; /* Adjust font size for readability */
+        margin: 5px; /* Reduce margin to fit more content */
+    }
+
+    form .display {
+        margin-bottom: 15px; /* Adjust display margin */
+    }
+
+    form .display input {
+        font-size: 20px; /* Smaller font size for the display */
+    }
+
+    form input.equal {
+        width: calc(100% - 10px); /* Adjust the width of the "=" button to span across */
+        max-width: 110px; /* Ensure it doesn't get too wide on larger screens within the query scope */
+    }
+
+    /* Optionally, adjust the font size or style of the operators to distinguish them better on small screens */
+    form input.oprator {
+        font-size: 18px; /* Slightly larger font size for operators for better visibility */
+    }
+}
